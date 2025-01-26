@@ -1,7 +1,6 @@
 package com.platzi.market.persistance.entity;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
@@ -18,7 +17,6 @@ public class Categoria {
 
     @OneToMany(mappedBy = "categoria")
     private List<Producto> productos;
-
 
     public Integer getIdCategoria() {
         return idCategoria;
@@ -43,6 +41,7 @@ public class Categoria {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
+
     public List<Producto> getProductos() {
         return productos;
     }
